@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-toggle">
+      <button id="login-toggle" onclick="toggleLogin()">Login</button>
+      <button id="signup-toggle" onclick="toggleSignup()">Signup</button>
+    </div>
+
+    <div class="form-content">
+      <!-- Login Form -->
+      <form id="login-form" class="form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Email or Username" required>
+        <input type="password" placeholder="Password" required>
+        <label>
+          <input type="checkbox"> Remember Me
+        </label>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signup-form" class="form hidden">
+        <h2>Signup</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleLogin() {
+      document.getElementById('login-form').classList.remove('hidden');
+      document.getElementById('signup-form').classList.add('hidden');
+    }
+
+    function toggleSignup() {
+      document.getElementById('signup-form').classList.remove('hidden');
+      document.getElementById('login-form').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
